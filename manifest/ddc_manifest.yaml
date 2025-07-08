@@ -85,10 +85,10 @@ spec:
   ingressClassName: nginx
   tls:
     - hosts:
-      - viya4.frasep.sas.com
-      - '*.viya4.frasep.sas.com'
+      - viya4.demo.frasep.unx.sas.com
+      - '*.viya4.demo.frasep.unx.sas.com'
   rules:
-    - host: viya4.frasep.sas.com
+    - host: viya4.demo.frasep.unx.sas.com
       http:
         paths:
           - path: /ddc(/|$)(.*)
@@ -98,7 +98,7 @@ spec:
                 name: ddc-service
                 port:
                   number: 3000
-    - host: '*.viya4.frasep.sas.com'
+    - host: '*.viya4.demo.frasep.unx.sas.com'
       http:
         paths:
           - path: /ddc(/|$)(.*)
